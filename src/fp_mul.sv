@@ -38,10 +38,4 @@ assign mant_b = {1'b1, srcb[9:0]}; // bit implicito
 assign sign_res = sign_a ^ sign_b; // signo del resultado
 
 
-logic [$clog2(10):0] lzc_count_a, lzc_count_b;
-
-lzc #(.WIDTH(10)) lzc_a (.src(mant_a[9:0]), .lzc_count(lzc_count_a), .all_zero());
-lzc #(.WIDTH(10)) lzc_b (.src(mant_b[9:0]), .lzc_count(lzc_count_b), .all_zero());
-
-
 endmodule
